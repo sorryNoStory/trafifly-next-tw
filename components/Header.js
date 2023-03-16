@@ -39,7 +39,11 @@ const Header = ({ headerData, navData }) => {
         {/* nav */}
         <Nav navData={navData} header={header} />
         {/* btn */}
+        <Link href={'#contact'}>
+          <a>
         <button className='btn'>{btnText}</button>
+        </a>
+        </Link>
       </div>
 
       <div
