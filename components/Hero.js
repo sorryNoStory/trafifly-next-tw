@@ -10,9 +10,11 @@ import {
   fadeInDown,
 } from '../variants';
 
+
 import { CgArrowLongRight } from 'react-icons/cg';
 
 const Hero = ({ headerData, heroData, navData }) => {
+
   const { title, boyImg, girlImg, truckImg, btnText } = heroData;
   return (
     <section className='bg-hero bg-no-repeat bg-left-top min-h-[800px] lg:min-h-[950px] lg:mb-80'>
@@ -21,11 +23,10 @@ const Hero = ({ headerData, heroData, navData }) => {
         variants={staggerContainer}
         initial='initial'
         animate='animate'
-        className='container z-1 mx-auto relative min-h-[800px] lg:min-h-[950px]'
+        className='container mx-auto relative min-h-[800px] lg:min-h-[950px]'
       >
         {/* header */}
-        <motion.div variants={fadeInDown}
-          className='fixed z-20 w-full'>
+        <motion.div variants={fadeInDown}>
           <Header headerData={headerData} navData={navData} />
         </motion.div>
 
@@ -48,7 +49,6 @@ const Hero = ({ headerData, heroData, navData }) => {
           {btnText} <CgArrowLongRight className='text-[30px]' />
         </motion.button>
 
-        {/* girl image */}
         <motion.div
           variants={girlAnim}
           className='hidden lg:flex absolute bottom-0'
@@ -56,7 +56,6 @@ const Hero = ({ headerData, heroData, navData }) => {
           <Image src={girlImg} width={206} height={495} />
         </motion.div>
 
-        {/* truck image */}
         <motion.div
           variants={heroTruckAnim}
           className='hidden lg:flex absolute -bottom-[25%] -left-[30%]'
@@ -64,7 +63,6 @@ const Hero = ({ headerData, heroData, navData }) => {
           <Image src={truckImg} width={811} height={395} />
         </motion.div>
 
-        {/* boy image */}
         <motion.div
           variants={boyAnim}
           className='hidden lg:flex absolute right-[380px] bottom-0 z-10'
