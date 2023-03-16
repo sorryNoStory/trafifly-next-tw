@@ -26,7 +26,8 @@ const Hero = ({ headerData, heroData, navData }) => {
         className='container mx-auto relative min-h-[800px] lg:min-h-[950px]'
       >
         {/* header */}
-        <motion.div variants={fadeInDown}>
+        <motion.div variants={fadeInDown}
+        className="absolute z-20">
           <Header headerData={headerData} navData={navData} />
         </motion.div>
 
