@@ -27,7 +27,7 @@ const Hero = ({ headerData, heroData, navData }) => {
       >
         {/* header */}
         <motion.div variants={fadeInDown}
-        className="absolute z-20">
+        className="relative z-20">
           <Header headerData={headerData} navData={navData} />
         </motion.div>
 
